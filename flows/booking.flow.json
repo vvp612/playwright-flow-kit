@@ -1,0 +1,16 @@
+{
+  "name": "booking-demo",
+  "baseUrl": "http://127.0.0.1:8971",
+  "defaults": { "timeout": 5000, "retries": 1 },
+  "steps": [
+    { "action": "goto", "url": "/index.html" },
+    { "action": "fill", "selector": "#name", "value": "Manh Vu" },
+    { "action": "fill", "selector": "#date", "value": "2026-11-15" },
+    { "action": "waitFor", "selector": "#submit" },
+    { "action": "click", "selector": "#submit" },
+    { "action": "waitFor", "selector": "#confirm" },
+    { "action": "extract", "selector": "#confirm", "name": "confirmation" },
+    { "action": "assert", "selector": "#confirm", "expect": { "textMatch": "BK-[A-Z0-9]{6}" } },
+    { "action": "screenshot", "name": "booking-confirmed", "path": "runs/demo-booking-confirmed.png" }
+  ]
+}
