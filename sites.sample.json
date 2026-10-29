@@ -1,0 +1,7 @@
+{
+  "sites": [
+    { "name": "example", "url": "https://example.com" },
+    { "name": "httpbin-ok", "url": "https://httpbin.org/status/200" },
+    { "name": "httpbin-404", "url": "https://httpbin.org/status/404" }
+  ]
+}
