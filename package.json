@@ -1,0 +1,20 @@
+{
+  "name": "playwright-flow-kit",
+  "version": "0.1.0",
+  "description": "Schema-driven browser automation flows on Playwright CDP with structured logging and screenshot evidence. Includes Site Health Auditor + weekly HTML report.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test 'test/*.test.js'",
+    "demo": "node e2e/run.js",
+    "audit": "node auditor/cli.js scan sites.json --out reports"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "pixelmatch": "^7.1.0",
+    "playwright": "^1.55.0",
+    "pngjs": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
